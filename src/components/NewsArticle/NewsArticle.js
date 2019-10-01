@@ -1,6 +1,20 @@
 import React from 'react';
 import './NewsArticle.css';
 
-// NEWSARTICLE COMPONENT CODE GOES HERE
+class NewsArticle extends React.Component {
 
-export default NewsArticle;
+  render() {
+    return (
+      <article>
+        <img src={this.props.news.img} alt="news" />
+        <h3>{this.props.news.headline}</h3>
+        <p>{this.props.news.description}</p>
+        <form action={this.props.news.url} method="get" target="_blank">
+         <button type="submit">Read Full Article</button>
+        </form>
+      </article>
+    )
+  }
+}
+
+export default NewsArticle; 
