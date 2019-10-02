@@ -1,5 +1,5 @@
 import React from 'react';
-import './Menu.css'
+import './Menu.scss'
 import NavButton from '../NavButton/NavButton';
 
 class Menu extends React.Component {
