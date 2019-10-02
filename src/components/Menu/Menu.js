@@ -1,12 +1,24 @@
 import React from 'react';
 import './Menu.css'
+import NavButton from '../NavButton/NavButton';
 
-const Menu = () => {
-  return (
-    <nav>
-      <button>click me</button>
-    </nav>
-  )
+class Menu extends React.Component {
+  
+  returnTabs = () => {
+    const tabs = ['local','health','science','technology','entertainment']
+    return tabs.map((tab, i) => <NavButton 
+      updateCurrentCategory={this.props.updateCurrentCategory} 
+      key={i} name={tab}
+    />)
+  }
+
+  render() {
+    return (
+      <nav>
+        {this.returnTabs()}
+      </nav>
+    )
+  }
 }
 
 export default Menu;

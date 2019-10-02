@@ -1,0 +1,11 @@
+.navButton {
+  border-radius: 4px;
+  font-size: 2em;
+  height: 75px;
+  width: 20%;
+  &:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+}

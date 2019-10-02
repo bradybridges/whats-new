@@ -1,11 +1,11 @@
 import React from 'react';
-import './NewsArticle.css';
+import './NewsArticle.scss';
 
 class NewsArticle extends React.Component {
 
   render() {
     return (
-      <article>
+      <article className="newsArticle">
         <img src={this.props.news.img} alt="news" />
         <h3>{this.props.news.headline}</h3>
         <p>{this.props.news.description}</p>
