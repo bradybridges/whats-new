@@ -1,11 +1,10 @@
 import React from 'react';
-import './NewsContainer.css'
+import './NewsContainer.scss'
 import NewsArticle from '../NewsArticle/NewsArticle';
 
 class NewsContainer extends React.Component {
  returnFormattedNews = () => {
-    const currentCategory = this.props.currentCategory;
-    return this.props.news[currentCategory].map((article, i) => <NewsArticle key={i} news={this.props.news[currentCategory][i]} />)
+    return this.props.news.map((article, i) => <NewsArticle key={i} news={this.props.news[i]} />)
   }
 
   render() {
