@@ -4,9 +4,8 @@ import './NavButton.scss';
 class NavButton extends React.Component {
 
   handleClick = (e) => {
-    // $('.news-article').remove();
     const category = e.target.innerText.toLowerCase();;
-    this.props.updateState(category);
+    this.props.updateCurrentCategory(category);
   }
 
   render() {

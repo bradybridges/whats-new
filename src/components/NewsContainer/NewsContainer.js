@@ -4,7 +4,8 @@ import NewsArticle from '../NewsArticle/NewsArticle';
 
 class NewsContainer extends React.Component {
  returnFormattedNews = () => {
-    return this.props.news.localNews.map((article, i) => <NewsArticle key={i} news={this.props.news.localNews[i]} />)
+    const currentCategory = this.props.currentCategory;
+    return this.props.news[currentCategory].map((article, i) => <NewsArticle key={i} news={this.props.news[currentCategory][i]} />)
   }
 
   render() {
