@@ -27,18 +27,18 @@ class App extends Component {
 
   updateCurrentCategory = (category) => {
     this.setState({currentCategory: category});
-    console.log(this.state.currentCategory);
   }
 
   render () {
     return (
-      <div>
+      <main>
+        <header><h1>Denver News</h1></header>
         <Menu updateCurrentCategory={this.updateCurrentCategory}/>
         <NewsContainer 
           news={this.state.news} 
           currentCategory={this.state.currentCategory}
         />
-      </div>
+      </main>
     );
   }
 }

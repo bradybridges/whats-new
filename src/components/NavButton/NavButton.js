@@ -9,7 +9,7 @@ class NavButton extends React.Component {
   }
 
   render() {
-    return <button onClick={e => this.handleClick(e)}>{this.props.name}</button>;
+    return <button className="navButton" onClick={e => this.handleClick(e)}>{this.props.name}</button>;
   }
 }
 
