@@ -1,19 +1,34 @@
 import React, { Component } from 'react';
-import local from '../../data/local';
 import './App.css';
+import NewsContainer from '../NewsContainer/NewsContainer';
+import Menu from '../Menu/Menu';
+
+import localNews from '../../data/local';
+import entertainmentNews from '../../data/entertainment';
+import healthNews from '../../data/health';
+import scienceNews from '../../data/science';
+import technologyNews from '../../data/technology';
+const news = {
+  localNews,
+  entertainmentNews,
+  healthNews,
+  scienceNews,
+  technologyNews
+};
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      local
+      news
     }
   }
 
   render () {
     return (
-      <div className="app">
-        YOUR CODE GOES HERE!
+      <div>
+        <Menu />
+        <NewsContainer news={this.state.news}/>
       </div>
     );
   }
