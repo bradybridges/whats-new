@@ -10,7 +10,7 @@ class NewsArticle extends React.Component {
         <h3>{this.props.news.headline}</h3>
         <p>{this.props.news.description}</p>
         <form action={this.props.news.url} method="get" target="_blank">
-         <button type="submit">Read Full Article</button>
+         <button className="article-button" type="submit">Read Full Article</button>
         </form>
       </article>
     )
