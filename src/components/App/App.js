@@ -3,28 +3,24 @@ import './App.scss';
 import NewsContainer from '../NewsContainer/NewsContainer';
 import Menu from '../Menu/Menu';
 import SearchForm from '../SearchForm/SearchForm';
-
 import local from '../../data/local';
-import entertainment from '../../data/entertainment';
-import health from '../../data/health';
-import science from '../../data/science';
-import technology from '../../data/technology';
-const news = {
-  local,
-  entertainment,
-  health,
-  science,
-  technology
-};
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      news,
+      news: null,
       currentCategory: 'local',
       currentNews: local
     }
+    this.fetchData();
+  }
+
+  fetchData = () => {
+    fetch('https://whats-new-api.herokuapp.com/api/v1/news')
+    .then(data => data.json())
+    .then(json => this.setState({news: json}))
+    .catch(error => console.log(error));
   }
 
   updateCurrentCategory = (category) => {
