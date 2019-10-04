@@ -30,7 +30,6 @@ class App extends Component {
 
   updateCurrentNews = (category) => {
     const updatedNews = this.state.news[category];
-    console.log(updatedNews);
     this.setState({currentNews: updatedNews});
   }
 

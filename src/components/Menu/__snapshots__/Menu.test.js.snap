@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu should match the snapshot 1`] = `
+<nav>
+  <NavButton
+    key="0"
+    name="local"
+    updateCurrentCategory={[MockFunction]}
+  />
+  <NavButton
+    key="1"
+    name="health"
+    updateCurrentCategory={[MockFunction]}
+  />
+  <NavButton
+    key="2"
+    name="science"
+    updateCurrentCategory={[MockFunction]}
+  />
+  <NavButton
+    key="3"
+    name="technology"
+    updateCurrentCategory={[MockFunction]}
+  />
+  <NavButton
+    key="4"
+    name="entertainment"
+    updateCurrentCategory={[MockFunction]}
+  />
+</nav>
+`;
