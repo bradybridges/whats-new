@@ -1,12 +1,18 @@
 .navButton {
-  border-radius: 4px;
+  background-color: #3f4446;
+  border-radius: 0px;
+  border: none;
+  color: #e3eef0;
   font-family: 'Roboto Slab', serif;
-  font-size: 2em;
+  font-size: 1.75em;
   height: 75px;
+  transition: .2s;
   width: 20%;
   &:hover{
-    background-color: #015045;
-    color: #be3400;
+    background-color: #1b1a1c;
+    border: solid 2px #779c43;
+    color: #779c43;
     cursor: pointer;
+    box-shadow: inset 0px -1px 10px 0px #779c43
   }
 }
