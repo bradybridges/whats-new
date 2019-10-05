@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsArticle should match the snapshot 1`] = `
+<article
+  className="newsArticle"
+>
+  <img
+    alt="news"
+  />
+  <h3>
+    Hello
+  </h3>
+  <p>
+    This is the description.
+  </p>
+  <form
+    method="get"
+    target="_blank"
+  >
+    <button
+      className="article-button"
+      type="submit"
+    >
+      Read Full Article
+    </button>
+  </form>
+</article>
+`;
