@@ -30,7 +30,7 @@ input {
   width: 100px;
   &:hover {
     background-color: $primary-color;
-    border: solid 1px $fourth-color;
+    border: solid 2px $fourth-color;
     border-left: 0;
     color: $tertiary-color;
     cursor: pointer;

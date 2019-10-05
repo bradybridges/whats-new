@@ -3,7 +3,6 @@ import './App.scss';
 import NewsContainer from '../NewsContainer/NewsContainer';
 import Menu from '../Menu/Menu';
 import SearchForm from '../SearchForm/SearchForm';
-import local from '../../data/local';
 
 class App extends Component {
   constructor() {
@@ -11,7 +10,7 @@ class App extends Component {
     this.state = {
       news: null,
       currentCategory: 'local',
-      currentNews: local,
+      currentNews: null,
       isLoading: true,
     }
     this.fetchData();

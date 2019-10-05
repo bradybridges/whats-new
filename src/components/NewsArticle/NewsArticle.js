@@ -13,7 +13,7 @@ class NewsArticle extends React.Component {
          <button className="article-button" type="submit">Read Full Article</button>
         </form>
       </article>
-    )
+    );
   }
 }
 
