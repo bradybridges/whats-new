@@ -33,9 +33,9 @@ describe('App', () => {
 
   describe('updateNews', () => {
     it('should update currentNews based on a search value', () => {
-      const event = {target: {value: 'man dies'}}
+      const mockEvent = {target: {value: 'man dies'}}
       wrapper.instance().updateCurrentCategory('health');
-      wrapper.instance().updateNews(event);
+      wrapper.instance().updateNews(mockEvent);
       expect(wrapper.state('currentNews')).toEqual([healthData[0]]);
     });
   });
