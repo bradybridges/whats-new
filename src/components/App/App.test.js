@@ -33,7 +33,18 @@ describe('App', () => {
 
   describe('updateNews', () => {
     it('should update currentNews based on a search value', () => {
-      const mockEvent = {target: {value: 'man dies'}}
+      const closest = jest.fn().mockImplementation((element) => {
+        return {children: [{value: 'man dies'}]};
+      });
+
+      const mockEvent = {
+        target: {
+          value: 'man dies',
+          closest
+        },
+        preventDefault: jest.fn(),
+      };
+      
       wrapper.instance().updateCurrentCategory('health');
       wrapper.instance().updateNews(mockEvent);
       expect(wrapper.state('currentNews')).toEqual([healthData[0]]);

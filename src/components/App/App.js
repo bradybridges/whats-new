@@ -34,7 +34,8 @@ class App extends Component {
   }
 
   updateNews = (event) => {
-    const searchInput = event.target.value.toLowerCase();
+    event.preventDefault();
+    const searchInput = event.target.closest('form').children[0].value;
     const currentCategory = this.state.currentCategory;
     const updatedNews = this.state.news[currentCategory].filter(news => {
       const headline = news.headline.toLowerCase();
