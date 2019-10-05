@@ -1,8 +1,11 @@
+$primary-color: #3f4446;
+$secondary-color: #e3eef0;
+
 .navButton {
-  background-color: #3f4446;
+  background-color: $primary-color;
   border-radius: 0px;
   border: none;
-  color: #e3eef0;
+  color: $secondary-color;
   font-family: 'Roboto Slab', serif;
   font-size: 1.75em;
   height: 75px;

@@ -1,17 +1,38 @@
 $primary-color: #171618fa;
-$secondary-color: #e3eef0;
+$secondary-color: #3f4446;
+$tertiary-color: #e3eef0;
 
 form {
+  display: flex;
   margin-right: 32px;
 }
 
 input {
-  background-color: $secondary-color;
-  border-radius: 4px;
+  background-color: $tertiary-color;
+  border-radius: 4px 0px 0px 4px;
   border: solid 2px #779c43;
-  color: $primary-color;
+  border-right: 0;
+  color: #171618fa;
   font-size: 1.5em;
   height: 50px;
   text-align: center;
   width: 300px;
+}
+
+#search-btn {
+  background-color: $secondary-color;
+  border: solid 2px #779c43;
+  border-left: 0;
+  border-radius: 0px 4px 4px 0px;
+  color: $tertiary-color;
+  font-size: 1em;
+  height: 50px;
+  transition: .2s;
+  width: 100px;
+  &:hover {
+    background-color: $primary-color;
+    color: $tertiary-color;
+    cursor: pointer;
+    font-size: 1.2em;
+  }
 }

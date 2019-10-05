@@ -6,9 +6,14 @@ exports[`SearchForm should match the snapshot 1`] = `
 >
   <input
     name="search-input"
-    onChange={[Function]}
     placeholder="Search"
     type="text"
   />
+  <button
+    id="search-btn"
+    onClick={[Function]}
+  >
+    Search
+  </button>
 </form>
 `;
