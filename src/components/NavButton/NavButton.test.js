@@ -9,6 +9,7 @@ describe('NavButton', () => {
   beforeEach(() => {
     wrapper = shallow(<NavButton updateCurrentCategory={updateCurrentCategoryMock}
       key={1}
+      name="local"
       />);
   });
 
