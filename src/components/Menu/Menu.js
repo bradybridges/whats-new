@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Menu.scss'
 import NavButton from '../NavButton/NavButton';
 
-class Menu extends React.Component {
-  
+class Menu extends Component {
   returnTabs = () => {
     const tabs = ['local','health','science','technology','entertainment']
     return tabs.map((tab, i) => <NavButton 

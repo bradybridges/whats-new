@@ -9,7 +9,10 @@ class NavButton extends React.Component {
   }
 
   render() {
-    return <button className="navButton" onClick={e => this.handleClick(e)}>{this.props.name}</button>;
+    let category = this.props.name.split('');
+    category[0] = category[0].toUpperCase();
+    category = category.join('');
+    return <button className="navButton" onClick={e => this.handleClick(e)}>{category}</button>;
   }
 }
 
