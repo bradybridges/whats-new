@@ -21,6 +21,4 @@ describe('NavButton', () => {
     wrapper.find('button').simulate('click', event);
     expect(updateCurrentCategoryMock).toHaveBeenCalledWith('local');
   });
-
-
-})//EOF
+})

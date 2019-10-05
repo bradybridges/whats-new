@@ -5,7 +5,7 @@ import SearchForm from './SearchForm';
 describe('SearchForm', () => {
   let wrapper;
   const updateNewsMock = jest.fn();
-  
+
   beforeEach(() => {
     wrapper = shallow(<SearchForm 
       updateNews={updateNewsMock}

@@ -16,12 +16,6 @@ describe('Menu', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  // it('should fire updateCurrentCategory on nav button click', () => {
-  //   // wrapper.find('NavButton').at(0).simulate('click');
-  //   // expect(updateCurrentCategoryMock).toHaveBeenCalled();
-  //   console.log(wrapper.debug());
-  // });
-
   describe('returnTabs', () => {
     it('should return all of the NavButtons', () => {
       const returnTabs = wrapper.instance().returnTabs();

@@ -39,4 +39,4 @@ describe('App', () => {
       expect(wrapper.state('currentNews')).toEqual([healthData[0]]);
     });
   });
-});//end of main describe
+});
