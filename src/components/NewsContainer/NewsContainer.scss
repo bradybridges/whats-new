@@ -1,8 +1,11 @@
 section {
-  background-image: url("../../images/mountain-background.jpg");
-  background-position: center; 
-  background-repeat: no-repeat; 
+  align-items: flex-start;
+  background-image: url(/static/media/mountain-background.548f389d.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  max-height:650px;
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 650px;
   overflow: scroll;
 }

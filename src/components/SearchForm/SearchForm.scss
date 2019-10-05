@@ -1,10 +1,17 @@
+$primary-color: #171618fa;
+$secondary-color: #e3eef0;
+
 form {
   margin-right: 32px;
 }
 
 input {
+  background-color: $secondary-color;
+  border-radius: 4px;
+  border: solid 2px #779c43;
+  color: $primary-color;
   font-size: 1.5em;
   height: 50px;
   text-align: center;
-  width: 250px;
+  width: 300px;
 }

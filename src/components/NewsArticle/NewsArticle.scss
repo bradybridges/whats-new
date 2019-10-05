@@ -2,7 +2,8 @@ $primary-color: #3f4446;
 $secondary-color: #e3eef0;
 
 img {
-  width: 400px;
+  border-radius: 5px;
+  width: 350px;
 }
 
 h3 {
@@ -13,6 +14,7 @@ h3 {
 }
 
 p {
+  font-size: 1.3em;
   margin-bottom: 20px;
   text-align: center;
   width: 75%;
@@ -29,7 +31,7 @@ p {
   flex-direction: column;
   margin: 20px auto;
   padding: 25px;
-  width: 60%;
+  width: 45%;
 }
 
 .article-button {
