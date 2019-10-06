@@ -19,6 +19,5 @@ describe('SearchForm', () => {
   it('should call updateNews on click of search button', () => {
     wrapper.find('#search-btn').simulate('click');
     expect(updateNewsMock).toHaveBeenCalled();
-    // console.log(wrapper.debug());
   });
-})
+});
