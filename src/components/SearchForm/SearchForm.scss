@@ -37,3 +37,15 @@ input {
     font-size: 1.2em;
   }
 }
+
+@media only screen and (max-width: 850px) {
+  form {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  input {
+    width: 220px;
+  }
+}

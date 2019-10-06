@@ -13,9 +13,30 @@ $secondary-color: #e3eef0;
   width: 20%;
   &:hover{
     background-color: #1b1a1c;
-    border: solid 2px #779c43;
+    border-top: solid 2px #779c43;
+    border-bottom: solid 2px #779c43;
     color: #779c43;
     cursor: pointer;
     box-shadow: inset 0px -1px 10px 0px #779c43
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .navButton {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .navButton {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navButton {
+    font-size: 1.5em;
+    height: 4vh;
+    width: 100vw;
   }
 }

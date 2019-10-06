@@ -9,3 +9,15 @@ section {
   height: 65vh;
   overflow: scroll;
 }
+
+@media only screen and (max-width: 850px) {
+  section {
+    flex-direction: column;
+    flex-wrap: unset;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  height: 60vh;
+}
+

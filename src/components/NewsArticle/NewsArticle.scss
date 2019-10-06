@@ -3,7 +3,7 @@ $secondary-color: #e3eef0;
 
 img {
   border-radius: 5px;
-  width: 350px;
+  width: 100%;
 }
 
 h3 {
@@ -41,6 +41,7 @@ p {
   font-family: 'Roboto Slab', serif;
   font-size: 1.2em;
   height: 50px;
+  margin-left: 30px;
   transition: .3s;
   width: 300px;
   &:hover {
@@ -49,5 +50,31 @@ p {
     color: #779c43;
     cursor: pointer;
     transform: scale(1.1);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .newsArticle {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .newsArticle {
+    padding: 5px;
+    width: 90%;
+  }
+
+  .article-button {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h3, p {
+    width: 100%;
+  }
+  .article-button {
+    width: 275px;
   }
 }
