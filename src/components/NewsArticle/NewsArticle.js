@@ -14,4 +14,6 @@ const NewsArticle = (props) => {
     </article>
   );
 };
-export default NewsArticle; 
+
+export default NewsArticle;
+
