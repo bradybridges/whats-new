@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "./static/css/main.90cdac93.chunk.css",
+    "main.js": "./static/js/main.645b0527.chunk.js",
+    "main.js.map": "./static/js/main.645b0527.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.bf980d17.js",
+    "runtime-main.js.map": "./static/js/runtime-main.bf980d17.js.map",
+    "static/js/2.baa04ac5.chunk.js": "./static/js/2.baa04ac5.chunk.js",
+    "static/js/2.baa04ac5.chunk.js.map": "./static/js/2.baa04ac5.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.bc2dd4dbb5dabff6508d74bae5bf59a4.js": "./precache-manifest.bc2dd4dbb5dabff6508d74bae5bf59a4.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.90cdac93.chunk.css.map": "./static/css/main.90cdac93.chunk.css.map",
+    "static/media/NewsContainer.scss": "./static/media/mountain-background.548f389d.jpg"
+  }
+}
