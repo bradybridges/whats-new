@@ -1,5 +1,7 @@
 $primary-color: #3f4446;
 $secondary-color: #e3eef0;
+$tertiary-color: #779c43;
+$fourth-color: #171618fa;
 
 .navButton {
   background-color: $primary-color;
@@ -8,14 +10,41 @@ $secondary-color: #e3eef0;
   color: $secondary-color;
   font-family: 'Roboto Slab', serif;
   font-size: 1.75em;
-  height: 75px;
+  height: 10vh;
   transition: .2s;
   width: 20%;
   &:hover{
-    background-color: #1b1a1c;
-    border: solid 2px #779c43;
-    color: #779c43;
+    background-color: $fourth-color;
+    border-top: solid 2px $tertiary-color;
+    border-bottom: solid 2px $tertiary-color;
+    color: $tertiary-color;
     cursor: pointer;
     box-shadow: inset 0px -1px 10px 0px #779c43
+  }
+}
+
+.active {
+  background-color: $fourth-color;
+  border-top: solid 2px $tertiary-color;
+  border-bottom: solid 2px $tertiary-color;
+}
+
+@media only screen and (max-width: 1000px) {
+  .navButton {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .navButton {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navButton {
+    font-size: 1.5em;
+    height: 4vh;
+    width: 100vw;
   }
 }

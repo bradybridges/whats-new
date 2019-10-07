@@ -7,9 +7,7 @@ describe('SearchForm', () => {
   const updateNewsMock = jest.fn();
 
   beforeEach(() => {
-    wrapper = shallow(<SearchForm 
-      updateNews={updateNewsMock}
-    />);
+    wrapper = shallow(<SearchForm updateNews={updateNewsMock} />);
   });
 
   it('should match the snapshot', () => {
@@ -19,6 +17,5 @@ describe('SearchForm', () => {
   it('should call updateNews on click of search button', () => {
     wrapper.find('#search-btn').simulate('click');
     expect(updateNewsMock).toHaveBeenCalled();
-    // console.log(wrapper.debug());
   });
-})
+});
