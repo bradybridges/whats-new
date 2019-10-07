@@ -5,6 +5,7 @@ import NavButton from './NavButton';
 describe('NavButton', () => {
   let wrapper;
   const updateCurrentCategoryMock = jest.fn();
+  const addMock = jest.fn();
   beforeEach(() => {
     wrapper = shallow(<NavButton 
       updateCurrentCategory={updateCurrentCategoryMock}
@@ -18,8 +19,9 @@ describe('NavButton', () => {
   });
 
   it('should fire updateCurrentCategory when button is clicked', () => {
-    const event = { target: { innerText: 'local' } };
+    const event = { target: { innerText: 'local', classList: { add: addMock } } };
     wrapper.find('button').simulate('click', event);
     expect(updateCurrentCategoryMock).toHaveBeenCalledWith('local');
+    expect(addMock).toHaveBeenCalledWith('active');
   });
 });

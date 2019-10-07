@@ -7,9 +7,7 @@ describe('SearchForm', () => {
   const updateNewsMock = jest.fn();
 
   beforeEach(() => {
-    wrapper = shallow(<SearchForm 
-      updateNews={updateNewsMock}
-    />);
+    wrapper = shallow(<SearchForm updateNews={updateNewsMock} />);
   });
 
   it('should match the snapshot', () => {

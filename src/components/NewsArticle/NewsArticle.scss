@@ -10,14 +10,12 @@ h3 {
   font-size: 2em;
   margin: 20px 0px;
   text-align: center;
-  width: 80%;
 }
 
 p {
   font-size: 1.3em;
   margin-bottom: 20px;
   text-align: center;
-  width: 75%;
 }
 
 .newsArticle {
@@ -31,7 +29,7 @@ p {
   flex-direction: column;
   margin: 20px auto;
   padding: 25px;
-  width: 30%;
+  width: 32%;
 }
 
 .article-button {
@@ -71,9 +69,6 @@ p {
 }
 
 @media only screen and (max-width: 500px) {
-  h3, p {
-    width: 100%;
-  }
   .article-button {
     width: 275px;
   }
