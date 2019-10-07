@@ -1,5 +1,5 @@
 # Whats New
-View the live page [here.]()
+View the live page [here.](https://bradybridges.github.io/whats-new/)
 
 ## Table of contents
 * [Objective](#Objective)
