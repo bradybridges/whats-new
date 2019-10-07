@@ -40,3 +40,5 @@ npm install
 1. To verify that it is setup correctly, run `npm start` in your terminal. The page should open on your browser.
 
 ## Screenshots
+![Dekstop Screenshot](https://github.com/bradybridges/whats-new/blob/master/screenshots/desktop.png)
+![Mobile Screenshot](https://github.com/bradybridges/whats-new/blob/master/screenshots/mobile.png)
