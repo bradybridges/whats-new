@@ -1,9 +1,12 @@
 import React from 'react';
 import './NavButton.scss';
+import $ from 'jquery';
 
 class NavButton extends React.Component {
 
   handleClick = (e) => {
+    e.target.classList.add('active');
+    $(e.target).siblings().removeClass('active');
     const category = e.target.innerText.toLowerCase();;
     this.props.updateCurrentCategory(category);
   }

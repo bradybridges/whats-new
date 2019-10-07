@@ -1,11 +1,23 @@
 section {
   align-items: flex-start;
-  background-image: url(/static/media/mountain-background.548f389d.jpg);
+  background-image: url('../../images/mountain-background.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-wrap: wrap;
-  max-height: 650px;
+  height: 65vh;
   overflow: scroll;
 }
+
+@media only screen and (max-width: 850px) {
+  section {
+    flex-direction: column;
+    flex-wrap: unset;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  height: 60vh;
+}
+

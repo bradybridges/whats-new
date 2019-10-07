@@ -3,7 +3,6 @@ import './App.scss';
 import NewsContainer from '../NewsContainer/NewsContainer';
 import Menu from '../Menu/Menu';
 import SearchForm from '../SearchForm/SearchForm';
-import local from '../../data/local';
 
 class App extends Component {
   constructor() {
@@ -11,7 +10,8 @@ class App extends Component {
     this.state = {
       news: null,
       currentCategory: 'local',
-      currentNews: local
+      currentNews: null,
+      isLoading: true,
     }
     this.fetchData();
   }
@@ -19,7 +19,11 @@ class App extends Component {
   fetchData = () => {
     fetch('https://whats-new-api.herokuapp.com/api/v1/news')
     .then(data => data.json())
-    .then(json => this.setState({news: json}))
+    .then(json => {
+      this.setState({news: json});
+      this.updateCurrentNews('local');
+      this.setState({ isLoading: false });
+    })
     .catch(error => console.log(error));
   }
 
@@ -34,7 +38,8 @@ class App extends Component {
   }
 
   updateNews = (event) => {
-    const searchInput = event.target.value.toLowerCase();
+    event.preventDefault();
+    const searchInput = event.target.closest('form').children[0].value;
     const currentCategory = this.state.currentCategory;
     const updatedNews = this.state.news[currentCategory].filter(news => {
       const headline = news.headline.toLowerCase();
@@ -49,19 +54,36 @@ class App extends Component {
   }
 
   render () {
-    return (
-      <main>
-        <header>
-          <h1>Denver News</h1>
-          <SearchForm updateNews={this.updateNews} />
-        </header>
-        <Menu updateCurrentCategory={this.updateCurrentCategory}/>
-        <NewsContainer 
-          news={this.state.currentNews} 
-          currentCategory={this.state.currentCategory}
-        />
-      </main>
-    );
+    if(this.state.isLoading) {
+      return (
+        <main>
+          <header>
+            <h1>Denver News</h1>
+            <SearchForm updateNews={this.updateNews} />
+          </header>
+          <Menu updateCurrentCategory={this.updateCurrentCategory}/>
+          <section id="loader-container">
+            <div className="loader"></div>
+          </section>
+        </main>
+
+      );
+    } else {
+      return (
+        <main>
+          <header>
+            <h1>Denver News</h1>
+            <SearchForm updateNews={this.updateNews} />
+          </header>
+          <Menu updateCurrentCategory={this.updateCurrentCategory}/>
+          <NewsContainer 
+            news={this.state.currentNews} 
+            currentCategory={this.state.currentCategory}
+          />
+        </main>
+        );
+    }
+    
   }
 }
 
